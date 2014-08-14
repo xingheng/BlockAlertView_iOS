@@ -70,13 +70,36 @@
         self.didDismissBlock(alertView, buttonIndex);
 }
 
-//// Called after edits in any of the default fields added by the style
-//- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
-//{
-//    if (self.ShouldEnableFirstOtherButtonBlock != nil)
-//        return self.ShouldEnableFirstOtherButtonBlock(alertView);
-//    else
-//        return NO;
-//}
+// Called after edits in any of the default fields added by the style
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
+{
+    if (self.ShouldEnableFirstOtherButtonBlock != nil)
+        return self.ShouldEnableFirstOtherButtonBlock(alertView);
+    else
+    {
+        switch ([super alertViewStyle]) {
+            case UIAlertViewStyleDefault:
+            case UIAlertViewStylePlainTextInput:
+                return YES;
+            case UIAlertViewStyleSecureTextInput:
+            {
+                NSString *text = [[super textFieldAtIndex:0] text];
+                if ([text isEqualToString:@""])
+                    return NO;
+                else
+                    return YES;
+            }
+            case UIAlertViewStyleLoginAndPasswordInput:
+            {
+                NSString *text = [[super textFieldAtIndex:0] text];
+                NSString *text2 = [[super textFieldAtIndex:1] text];
+                if ([text isEqualToString:@""] || [text2 isEqualToString:@""])
+                    return NO;
+                else
+                    return YES;
+            }
+        }
+    }
+}
 
 @end

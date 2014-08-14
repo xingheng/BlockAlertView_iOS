@@ -42,6 +42,8 @@
         NSLog(@"clickButtonBlock: %@, index: %d", alertView, buttonIndex);
     };
     
+    bAlert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+    
     [bAlert show];
 }
 
