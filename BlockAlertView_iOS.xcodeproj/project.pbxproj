@@ -22,6 +22,7 @@
 		6853ACE8199CD36D00415B38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6853ACC7199CD36D00415B38 /* UIKit.framework */; };
 		6853ACF0199CD36D00415B38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6853ACEE199CD36D00415B38 /* InfoPlist.strings */; };
 		6853ACF2199CD36D00415B38 /* BlockAlertView_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853ACF1199CD36D00415B38 /* BlockAlertView_iOSTests.m */; };
+		6853ACFE199CD3BB00415B38 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853ACFD199CD3BB00415B38 /* BlockAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		6853ACED199CD36D00415B38 /* BlockAlertView_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockAlertView_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		6853ACEF199CD36D00415B38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6853ACF1199CD36D00415B38 /* BlockAlertView_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView_iOSTests.m; sourceTree = "<group>"; };
+		6853ACFC199CD3BB00415B38 /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
+		6853ACFD199CD3BB00415B38 /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 				6853ACD8199CD36D00415B38 /* Main_iPad.storyboard */,
 				6853ACDB199CD36D00415B38 /* ViewController.h */,
 				6853ACDC199CD36D00415B38 /* ViewController.m */,
+				6853ACFB199CD38A00415B38 /* Classes */,
 				6853ACDE199CD36D00415B38 /* Images.xcassets */,
 				6853ACCA199CD36D00415B38 /* Supporting Files */,
 			);
@@ -153,6 +157,15 @@
 				6853ACEE199CD36D00415B38 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6853ACFB199CD38A00415B38 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6853ACFC199CD3BB00415B38 /* BlockAlertView.h */,
+				6853ACFD199CD3BB00415B38 /* BlockAlertView.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6853ACDD199CD36D00415B38 /* ViewController.m in Sources */,
+				6853ACFE199CD3BB00415B38 /* BlockAlertView.m in Sources */,
 				6853ACD4199CD36D00415B38 /* AppDelegate.m in Sources */,
 				6853ACD0199CD36D00415B38 /* main.m in Sources */,
 			);
