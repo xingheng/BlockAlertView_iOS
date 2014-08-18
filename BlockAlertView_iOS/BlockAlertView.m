@@ -17,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.delegate = self;
+        //self.delegate = self;   // Not sure why this doesn't work, set the delegate later.
     }
     return self;
 }
@@ -28,6 +28,17 @@
     [super show];
 }
 
+
+- (void)setPlainText:(NSString *)strValue
+{
+    self.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [[self textFieldAtIndex:0] setText:strValue];
+}
+
+- (NSString *)plainText
+{
+    return [[self textFieldAtIndex:0] text];
+}
 
 #pragma mark - UIAlertViewDelegate
 

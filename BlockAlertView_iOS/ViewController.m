@@ -42,7 +42,12 @@
         NSLog(@"clickButtonBlock: %@, index: %d", alertView, buttonIndex);
     };
     
-    bAlert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+    bAlert.ShouldEnableFirstOtherButtonBlock = ^(UIAlertView *alertView) {
+        return YES;
+    };
+    
+//    bAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [bAlert setPlainText:@"Input something here..."];
     
     [bAlert show];
 }

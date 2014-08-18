@@ -10,7 +10,6 @@
 
 typedef void (^BlockAlertViewDelegate)(UIAlertView *alertView);
 typedef void (^BlockAlertViewIndexDelegate)(UIAlertView *alertView, NSInteger buttonIndex);
-typedef BOOL (^BlockAlertViewSwitcherDelegate)(UIAlertView *alertView);
 
 @interface BlockAlertView : UIAlertView
 
@@ -23,6 +22,9 @@ typedef BOOL (^BlockAlertViewSwitcherDelegate)(UIAlertView *alertView);
 @property (assign, nonatomic) BlockAlertViewIndexDelegate willDismissBlock;
 @property (assign, nonatomic) BlockAlertViewIndexDelegate didDismissBlock;
 
-@property (assign, nonatomic) BlockAlertViewSwitcherDelegate ShouldEnableFirstOtherButtonBlock;
+@property (assign, nonatomic) BOOL (^ShouldEnableFirstOtherButtonBlock)(UIAlertView *alertView);
+
+
+- (void)setPlainText:(NSString *)strValue;
 
 @end
