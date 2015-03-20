@@ -13,16 +13,16 @@ typedef void (^BlockAlertViewIndexDelegate)(UIAlertView *alertView, NSInteger bu
 
 @interface BlockAlertView : UIAlertView
 
-@property (assign, nonatomic) BlockAlertViewIndexDelegate clickButtonBlock;
+@property (copy, nonatomic) BlockAlertViewIndexDelegate clickButtonBlock;
 
-@property (assign, nonatomic) BlockAlertViewDelegate cancelBlock;
-@property (assign, nonatomic) BlockAlertViewDelegate willPresentBlock;
-@property (assign, nonatomic) BlockAlertViewDelegate didPresentBlock;
+@property (copy, nonatomic) BlockAlertViewDelegate cancelBlock;
+@property (copy, nonatomic) BlockAlertViewDelegate willPresentBlock;
+@property (copy, nonatomic) BlockAlertViewDelegate didPresentBlock;
 
-@property (assign, nonatomic) BlockAlertViewIndexDelegate willDismissBlock;
-@property (assign, nonatomic) BlockAlertViewIndexDelegate didDismissBlock;
+@property (copy, nonatomic) BlockAlertViewIndexDelegate willDismissBlock;
+@property (copy, nonatomic) BlockAlertViewIndexDelegate didDismissBlock;
 
-@property (assign, nonatomic) BOOL (^ShouldEnableFirstOtherButtonBlock)(UIAlertView *alertView);
+@property (copy, nonatomic) BOOL (^ShouldEnableFirstOtherButtonBlock)(UIAlertView *alertView);
 
 
 - (void)setPlainText:(NSString *)strValue;

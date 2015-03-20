@@ -32,7 +32,7 @@
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:@"Message" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
 //    [alert show];
     
-    BlockAlertView *bAlert = [[BlockAlertView alloc] initWithTitle:@"Title" message:@"Message" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    BlockAlertView *bAlert = [[BlockAlertView alloc] initWithTitle:@"Title" message:@"Message" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", @"OK1", @"OK2", nil];
     
     bAlert.cancelBlock = ^(UIAlertView *alertView) {
         NSLog(@"cancelBlock: %@", alertView);
